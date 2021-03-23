@@ -1,9 +1,10 @@
-let currentResult = 0;
-let result = 0;
+const defaultResult = 0;
+let result = defaultResult;
 
 function add() {
-    currentResult = result;
+    let currentResult = result;
+    let desc = `${currentResult} + ${currentInputValue.value}`;
     result = result + parseInt(currentInputValue.value);
     // alert(`curr : ${currentResult} , res: ${result}`);
-    outputResult(result, ` ${currentResult} + ${currentInputValue.value}`);
+    outputResult(result, desc);
 }
